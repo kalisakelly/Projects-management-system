@@ -228,6 +228,15 @@ app_license = "mit"
 # 	}
 # ]
 
+permission_query_conditions = {
+    "Project": "project_management_system.project.get_permission_query_conditions"
+}
+
+has_permission = {
+    "Project": "project_management_system.project.has_permission"
+}
+
+
 # Authentication and authorization
 # --------------------------------
 
