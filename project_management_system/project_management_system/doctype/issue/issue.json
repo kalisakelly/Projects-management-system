@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-12 11:40:58.133977",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_c5dv",
+  "issue_no",
+  "email",
+  "amended_from",
+  "column_break_avzo",
+  "project",
+  "issue_category",
+  "institution",
+  "status",
+  "issue_details_section",
+  "issue",
+  "description",
+  "attachement",
+  "location_section",
+  "province",
+  "sector",
+  "village",
+  "column_break_ylkn",
+  "district",
+  "cell"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_c5dv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Issue",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "issue_no",
+   "fieldtype": "Data",
+   "label": "Issue No"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_avzo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "institution",
+   "fieldtype": "Data",
+   "label": "Institution",
+   "options": "Institution"
+  },
+  {
+   "fieldname": "issue_details_section",
+   "fieldtype": "Section Break",
+   "label": "Issue Details"
+  },
+  {
+   "fieldname": "issue",
+   "fieldtype": "Data",
+   "label": "Issue"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "province",
+   "fieldtype": "Link",
+   "label": "Province",
+   "options": "Province"
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Link",
+   "label": "Sector",
+   "options": "Sector"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "fieldname": "column_break_ylkn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "cell",
+   "fieldtype": "Link",
+   "label": "Cell",
+   "options": "Cell"
+  },
+  {
+   "fieldname": "issue_category",
+   "fieldtype": "Link",
+   "label": "Issue category",
+   "options": "Issue category"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nOngoing\nResolved\nInvalid"
+  },
+  {
+   "fieldname": "attachement",
+   "fieldtype": "Attach",
+   "label": "Attachement"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-12 12:04:32.934608",
+ "modified_by": "Administrator",
+ "module": "Project Management System",
+ "name": "Issue",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
