@@ -14,17 +14,17 @@
   "issue_category",
   "institution",
   "status",
-  "issue_details_section",
-  "issue",
-  "description",
-  "attachement",
   "location_section",
   "province",
   "sector",
   "village",
   "column_break_ylkn",
   "district",
-  "cell"
+  "cell",
+  "issue_details_section",
+  "issue",
+  "description",
+  "attachement"
  ],
  "fields": [
   {
@@ -57,9 +57,9 @@
   },
   {
    "fieldname": "project",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Project",
-   "options": "Project"
+   "read_only": 1
   },
   {
    "fieldname": "institution",
@@ -130,9 +130,9 @@
   {
    "default": "Open",
    "fieldname": "status",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Status",
-   "options": "Open\nOngoing\nResolved\nInvalid"
+   "options": "Status"
   },
   {
    "fieldname": "attachement",
@@ -143,7 +143,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-12 12:04:32.934608",
+ "modified": "2024-11-13 09:56:00.237813",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Issue",
