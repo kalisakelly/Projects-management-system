@@ -8,7 +8,6 @@
  "field_order": [
   "section_break_moje",
   "institution_name",
-  "institution_admin",
   "parent_institution",
   "column_break_thmz",
   "lft",
@@ -65,18 +64,12 @@
   {
    "fieldname": "column_break_thmz",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "institution_admin",
-   "fieldtype": "Link",
-   "label": "Institution admin",
-   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-11-11 16:07:41.733631",
+ "modified": "2024-11-13 11:34:42.766647",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Institution",
@@ -93,6 +86,17 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "select": 1,
    "share": 1,
    "write": 1
   }

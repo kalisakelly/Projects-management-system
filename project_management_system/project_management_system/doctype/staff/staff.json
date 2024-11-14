@@ -1,14 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{institution}.{###}",
  "creation": "2024-11-11 16:39:24.250394",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_upeo",
-  "full_name",
+  "first_name",
+  "last_name",
   "institution",
+  "column_break_rphb",
+  "full_name",
   "email",
+  "role",
+  "section_break_upeo",
   "amended_from"
  ],
  "fields": [
@@ -35,21 +40,45 @@
    "fieldname": "institution",
    "fieldtype": "Link",
    "label": "Institution",
-   "options": "Institution"
+   "options": "Institution",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "column_break_rphb",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email"
+  },
+  {
+   "default": "Staff",
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "label": "Role",
+   "options": "Admin\nProject Manager\nStaff",
+   "sort_options": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-11 17:04:45.038595",
+ "modified": "2024-11-13 12:30:49.548867",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Staff",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -61,6 +90,19 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
    "share": 1,
    "submit": 1,
    "write": 1

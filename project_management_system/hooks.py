@@ -4,6 +4,7 @@ app_publisher = "kalisakelly"
 app_description = "Institutions project management system"
 app_email = "kalisakelly2001@gmail.com"
 app_license = "mit"
+require='https://github.com/victor-abz/rwanda.git'
 
 # Apps
 # ------------------
