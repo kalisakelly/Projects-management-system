@@ -5,26 +5,45 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "tab_3_tab",
+  "how_does_the_citizen_wish_to_be_contacted_section",
+  "remain_anonymous",
+  "receive_updates_from_facilitator",
+  "receive_updates_directly",
+  "column_break_clge",
+  "email",
+  "column_break_ziab",
+  "details_section",
+  "name1",
+  "gender",
+  "educational_level",
+  "column_break_nhmx",
+  "enter_age_group",
+  "occupation_status",
+  "details_tab",
   "section_break_c5dv",
   "issue_no",
-  "email",
   "amended_from",
+  "date_of_intake",
+  "date_of_issue",
   "column_break_avzo",
   "project",
   "issue_category",
   "institution",
   "status",
+  "level",
+  "issue_details_section",
+  "issue",
+  "description",
+  "attachement",
+  "escalate_to",
   "location_section",
   "province",
   "sector",
   "village",
   "column_break_ylkn",
   "district",
-  "cell",
-  "issue_details_section",
-  "issue",
-  "description",
-  "attachement"
+  "cell"
  ],
  "fields": [
   {
@@ -45,11 +64,6 @@
    "fieldname": "issue_no",
    "fieldtype": "Data",
    "label": "Issue No"
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
   },
   {
    "fieldname": "column_break_avzo",
@@ -130,20 +144,127 @@
   {
    "default": "Open",
    "fieldname": "status",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Status",
-   "options": "Status"
+   "options": "Open\nOngoing\nResolved\nInvalid\nEscalate"
   },
   {
    "fieldname": "attachement",
    "fieldtype": "Attach",
    "label": "Attachement"
+  },
+  {
+   "fieldname": "tab_3_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personal details"
+  },
+  {
+   "fieldname": "how_does_the_citizen_wish_to_be_contacted_section",
+   "fieldtype": "Section Break",
+   "label": "How does the citizen wish to be contacted?"
+  },
+  {
+   "default": "0",
+   "fieldname": "remain_anonymous",
+   "fieldtype": "Check",
+   "label": "Remain anonymous"
+  },
+  {
+   "fieldname": "column_break_clge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "receive_updates_from_facilitator",
+   "fieldtype": "Check",
+   "label": "Receive updates from facilitator"
+  },
+  {
+   "fieldname": "column_break_ziab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "receive_updates_directly",
+   "fieldtype": "Check",
+   "label": "Receive updates directly"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Female\nMale"
+  },
+  {
+   "fieldname": "enter_age_group",
+   "fieldtype": "Select",
+   "label": "Enter age group",
+   "options": "0-5\n6-15\n16-35\n36-50\n51-64\n65+"
+  },
+  {
+   "fieldname": "occupation_status",
+   "fieldtype": "Select",
+   "label": "Occupation status",
+   "options": "Employed\nunemployed\nSelf employed"
+  },
+  {
+   "fieldname": "educational_level",
+   "fieldtype": "Select",
+   "label": "Educational level",
+   "options": "Secondary level\nA1\nA0\nMasters\nPHD"
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "date_of_intake",
+   "fieldtype": "Date",
+   "label": "Date of intake",
+   "options": "now"
+  },
+  {
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "label": "Date of issue"
+  },
+  {
+   "fetch_from": "issue_category.level",
+   "fieldname": "level",
+   "fieldtype": "Data",
+   "label": "Level"
+  },
+  {
+   "fieldname": "escalate_to",
+   "fieldtype": "Link",
+   "label": "Escalate to",
+   "options": "Staff"
+  },
+  {
+   "fieldname": "column_break_nhmx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-13 09:56:00.237813",
+ "modified": "2024-11-17 09:37:47.417951",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Issue",
@@ -160,6 +281,42 @@
    "role": "System Manager",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Project Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Staff",
+   "share": 1,
    "write": 1
   }
  ],

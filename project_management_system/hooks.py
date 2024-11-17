@@ -22,6 +22,14 @@ require='https://github.com/victor-abz/rwanda.git'
 # 	}
 # ]
 
+fixtures = [
+    
+    "Workflow",
+    "Workflow State",
+    "Workflow Action",
+    
+]
+
 # Includes in <head>
 # ------------------
 

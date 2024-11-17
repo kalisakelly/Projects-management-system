@@ -12,9 +12,9 @@ class Staff(Document):
         full_name(self)
     
     def validate(self):
-        user=frappe.session.user
-        print(user)
-
+        if not self.level:
+            frappe.throw("Please assign a level to the staff member.")
+            
 def create_user(email, institution, role):
     try:
         if frappe.db.exists("User", email):

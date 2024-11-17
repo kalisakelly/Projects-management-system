@@ -1,0 +1,197 @@
+[
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-16 22:46:56.639215",
+  "name": "rlbei03qq1",
+  "permitted_roles": [
+   {
+    "parent": "rlbei03qq1",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "v469jcdcrp",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Open"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-16 22:46:59.819660",
+  "name": "4g1ph7u6pn",
+  "permitted_roles": [
+   {
+    "parent": "4g1ph7u6pn",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "v469jcdcrp",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Inprogress"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-16 22:47:03.445163",
+  "name": "vn9a2e9lhn",
+  "permitted_roles": [
+   {
+    "parent": "vn9a2e9lhn",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "v469jcdcrp",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Escalated"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-17 01:31:09.769673",
+  "name": "ijmqt0ei3u",
+  "permitted_roles": [
+   {
+    "parent": "ijmqt0ei3u",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "ockmrll6ep",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Open"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-17 01:31:11.747327",
+  "name": "gbrlaostkv",
+  "permitted_roles": [
+   {
+    "parent": "gbrlaostkv",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "ockmrll6ep",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Inprogress"
+ },
+ {
+  "completed_by": "Administrator",
+  "completed_by_role": "System Manager",
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-17 01:31:13.354341",
+  "name": "8qa901brnv",
+  "permitted_roles": [
+   {
+    "parent": "8qa901brnv",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "ockmrll6ep",
+  "status": "Completed",
+  "user": null,
+  "workflow_state": "Escalated"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-17 01:47:48.986305",
+  "name": "8h8blpq8kk",
+  "permitted_roles": [
+   {
+    "parent": "8h8blpq8kk",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "ev34isp9fq",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Open"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-17 01:59:18.068670",
+  "name": "59n56sgga9",
+  "permitted_roles": [
+   {
+    "parent": "59n56sgga9",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "System Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "gr3qc65jkm",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Open"
+ },
+ {
+  "completed_by": null,
+  "completed_by_role": null,
+  "docstatus": 0,
+  "doctype": "Workflow Action",
+  "modified": "2024-11-17 09:37:11.054083",
+  "name": "qbq6c863gs",
+  "permitted_roles": [
+   {
+    "parent": "qbq6c863gs",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "Staff"
+   },
+   {
+    "parent": "qbq6c863gs",
+    "parentfield": "permitted_roles",
+    "parenttype": "Workflow Action",
+    "role": "Project Manager"
+   }
+  ],
+  "reference_doctype": "Issue",
+  "reference_name": "6nkt2h3npf",
+  "status": "Open",
+  "user": null,
+  "workflow_state": "Open"
+ }
+]

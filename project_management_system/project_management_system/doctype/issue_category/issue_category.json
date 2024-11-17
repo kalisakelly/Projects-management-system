@@ -1,12 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:name1",
  "creation": "2024-11-12 11:39:36.796017",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_7gng",
   "name1",
+  "level",
   "amended_from"
  ],
  "fields": [
@@ -27,16 +29,24 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "label": "Level",
+   "options": "1\n2\n3"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-12 11:39:53.336868",
+ "modified": "2024-11-17 01:29:07.994673",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Issue category",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

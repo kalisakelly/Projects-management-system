@@ -13,6 +13,7 @@
   "full_name",
   "email",
   "role",
+  "level",
   "section_break_upeo",
   "amended_from"
  ],
@@ -40,8 +41,7 @@
    "fieldname": "institution",
    "fieldtype": "Link",
    "label": "Institution",
-   "options": "Institution",
-   "read_only": 1
+   "options": "Institution"
   },
   {
    "fieldname": "first_name",
@@ -67,14 +67,20 @@
    "fieldname": "role",
    "fieldtype": "Select",
    "label": "Role",
-   "options": "Admin\nProject Manager\nStaff",
+   "options": "Admin\nProject Manager\nStaff\nOffice",
    "sort_options": 1
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "label": "Level",
+   "options": "1\n2\n3"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-13 12:30:49.548867",
+ "modified": "2024-11-17 02:03:55.608865",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Staff",

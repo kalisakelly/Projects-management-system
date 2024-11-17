@@ -3,27 +3,51 @@
 
 frappe.ui.form.on("Issue", {
   refresh(frm) {
-    // Add a custom button to respond to the issue
     frm.add_custom_button("Respond Issue", function () {
       frm.trigger("respond_issue");
     });
+    
 
-    // Fetch districts dynamically when the province is set
-    // if (frm.doc.province) {
-    //   frm.trigger("fetch_districts");
-    // }
+    if (frm.doc.level && frm.doc.workflow_state !== "Resolved") {
+      frm.add_custom_button("Escalate", function () {
+        frappe.call({
+          method: "project_management_system.project_management_system.doctype.issue.issue.escalate_issue",
+          args: { issue_name: frm.doc.name },
+          callback: function (r) {
+            if (!r.exc) {
+              frm.reload_doc();
+            }
+          }
+        });
+      });
+    }
+
+    frm.trigger("toggle_email_field");
+
+      if (frm.doc.workflow_state !== "Resolved") {
+      frm.add_custom_button("Resolve", function () {
+        frappe.call({
+          method: "frappe.model.workflow_action.submit",
+          args: { doctype: "Issue", name: frm.doc.name },
+          callback: function (r) {
+            if (!r.exc) {
+              frm.reload_doc();
+            }
+          }
+        });
+      });
+    }
+    
   },
 
   province: function (frm) {
-    // Trigger fetching districts when the province is changed
     frm.trigger("fetch_districts");
   },
 
   fetch_districts(frm) {
-    // Ensure province is selected
     if (!frm.doc.province) {
       frappe.msgprint(__('Please select a province to fetch districts.'));
-      frm.set_value('district', null); // Clear district if no province
+      frm.set_value('district', null); 
       return;
     }
 
@@ -34,19 +58,24 @@ frappe.ui.form.on("Issue", {
       },
       callback: function (r) {
         if (r.message) {
-          // Populate the district field with options
           frm.set_df_property('district', 'options', r.message);
-          frm.set_value('district', r.message[0] || null); // Set the first district as default
+          frm.set_value('district', r.message[0] || null); 
         } else {
-          frm.set_df_property('district', 'options', []); // Clear options if no results
-          frm.set_value('district', null); // Clear district value
+          frm.set_df_property('district', 'options', []); 
+          frm.set_value('district', null);
         }
       }
     });
   },
+  receive_updates_from_facilitator(frm) {
+    frm.trigger("toggle_email_field");
+  },
+
+  toggle_email_field(frm) {
+    frm.toggle_display("email", frm.doc.receive_updates_from_facilitator === 1);
+  },
 
   respond_issue(frm) {
-    // Create a dialog to prompt for a response comment
     let dialog = new frappe.ui.Dialog({
       title: __('Enter your comment'),
       fields: [
@@ -54,7 +83,7 @@ frappe.ui.form.on("Issue", {
           label: 'Comment',
           fieldname: 'comment',
           fieldtype: 'Small Text',
-          reqd: true, // Mark the comment field as required
+          reqd: true, 
         }
       ],
       primary_action: function () {
@@ -65,7 +94,6 @@ frappe.ui.form.on("Issue", {
           return;
         }
 
-        // Call the Frappe method to add the comment
         frappe.call({
           method: "frappe.desk.form.utils.add_comment",
           args: {
@@ -79,7 +107,7 @@ frappe.ui.form.on("Issue", {
             if (!r.exc) {
               frappe.msgprint(__('Comment added successfully.'));
               dialog.hide();
-              frm.reload_doc(); // Reload the document to reflect the comment
+              frm.reload_doc(); 
             }
           }
         });
@@ -87,7 +115,6 @@ frappe.ui.form.on("Issue", {
       primary_action_label: __('Submit'),
     });
 
-    // Show the dialog
     dialog.show();
   },
 });

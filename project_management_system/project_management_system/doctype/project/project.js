@@ -10,7 +10,8 @@ frappe.ui.form.on("Project", {
 
   create_issue(frm) {
     frappe.new_doc("Issue", {
-      project: frm.doc.name, 
+      project: frm.doc.name,
+      institution: frm.doc.institution
     });
   },
 });
