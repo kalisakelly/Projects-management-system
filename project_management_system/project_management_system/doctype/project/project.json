@@ -8,10 +8,12 @@
  "field_order": [
   "section_break_2sgu",
   "project_name",
-  "descriptions",
+  "column_break_izrf",
+  "department",
   "institution",
-  "attachements",
   "section_break_timp",
+  "descriptions",
+  "attachements",
   "amended_from"
  ],
  "fields": [
@@ -40,10 +42,11 @@
    "label": "Descriptions"
   },
   {
+   "fetch_from": "department.institutions",
+   "fetch_if_empty": 1,
    "fieldname": "institution",
-   "fieldtype": "Link",
-   "label": "Institution",
-   "options": "Institution"
+   "fieldtype": "Data",
+   "label": "Institution"
   },
   {
    "fieldname": "attachements",
@@ -53,12 +56,22 @@
   {
    "fieldname": "section_break_timp",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_izrf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-17 00:29:32.730882",
+ "modified": "2024-11-18 11:40:08.585985",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Project",

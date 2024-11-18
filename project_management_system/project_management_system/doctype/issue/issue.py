@@ -51,39 +51,48 @@ def has_permission(doc, user):
 @frappe.whitelist()
 def escalate_issue(issue_name):
     """
-    Escalate the issue to the next level, if possible.
+    Escalate the issue to the next level and update its category, if possible.
     """
     issue = frappe.get_doc("Issue", issue_name)
     current_level = issue.level
 
-    # Map escalation levels
+    # Map escalation levels and corresponding categories
     escalation_flow = {
-        "1": "2",
-        "2": "3",
-        "3": None  # No further escalation
+        "1": {"next_level": "2", "category": "Intermediate"},
+        "2": {"next_level": "3", "category": "Critical"},
+        "3": {"next_level": None, "category": "Critical"}  # No further escalation
     }
 
-    next_level = escalation_flow.get(current_level)
+    # Get the next level and category
+    escalation_data = escalation_flow.get(current_level)
+    if not escalation_data:
+        frappe.throw("Invalid level. Unable to escalate the issue.")
+    
+    next_level = escalation_data["next_level"]
+    next_category = escalation_data["category"]
 
     if not next_level:
         frappe.throw("This issue is already at the highest level and cannot be escalated further.")
 
-    # Find staff at the next level
+    # Find staff at the next level in the same institution
     next_staff = frappe.get_all(
         "Staff",
         filters={
             "level": next_level,
             "institution": issue.institution
         },
+        fields=["name"],
         limit=1
     )
 
     if not next_staff:
-        frappe.throw(f"No staff available at {next_level} in this institution.")
+        frappe.throw(f"No staff available at level {next_level} in this institution.")
 
-    # Assign the issue to the next level and update fields
+    # Update the issue fields
     issue.level = next_level
+    issue.issue_category = next_category
     issue.status = "Escalated"
+    issue.assigned_to = next_staff[0]["name"]
     issue.save()
 
-    frappe.msgprint(f"Issue escalated to {next_level} and assigned to {next_staff[0]}.")
+    frappe.msgprint(f"Issue escalated to level {next_level} and assigned to {next_staff[0]['name']}.")

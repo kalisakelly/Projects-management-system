@@ -9,6 +9,7 @@
   "first_name",
   "last_name",
   "institution",
+  "department",
   "column_break_rphb",
   "full_name",
   "email",
@@ -75,12 +76,18 @@
    "fieldtype": "Select",
    "label": "Level",
    "options": "1\n2\n3"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-17 02:03:55.608865",
+ "modified": "2024-11-18 11:10:29.575857",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Staff",
