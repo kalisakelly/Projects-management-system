@@ -2,18 +2,21 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:name1",
- "creation": "2024-11-12 11:39:36.796017",
+ "creation": "2024-11-18 20:08:26.824891",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_7gng",
+  "section_break_3b2y",
+  "amended_from",
   "name1",
+  "department",
   "level",
-  "amended_from"
+  "institution",
+  "project"
  ],
  "fields": [
   {
-   "fieldname": "section_break_7gng",
+   "fieldname": "section_break_3b2y",
    "fieldtype": "Section Break"
   },
   {
@@ -33,16 +36,34 @@
    "unique": 1
   },
   {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "department.level",
    "fieldname": "level",
-   "fieldtype": "Select",
-   "label": "Level",
-   "options": "1\n2\n3"
+   "fieldtype": "Data",
+   "label": "Level"
+  },
+  {
+   "fetch_from": "department.institution",
+   "fieldname": "institution",
+   "fieldtype": "Data",
+   "label": "Institution"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-17 10:20:30.983753",
+ "modified": "2024-11-18 20:24:26.078051",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Issue category",
@@ -63,6 +84,8 @@
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -70,16 +93,7 @@
    "report": 1,
    "role": "Project Manager",
    "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Staff",
-   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

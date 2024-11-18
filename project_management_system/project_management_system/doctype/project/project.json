@@ -42,11 +42,11 @@
    "label": "Descriptions"
   },
   {
-   "fetch_from": "department.institutions",
    "fetch_if_empty": 1,
    "fieldname": "institution",
-   "fieldtype": "Data",
-   "label": "Institution"
+   "fieldtype": "Link",
+   "label": "Institution",
+   "options": "Institution"
   },
   {
    "fieldname": "attachements",
@@ -71,7 +71,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-18 11:40:08.585985",
+ "modified": "2024-11-18 15:29:51.798695",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Project",

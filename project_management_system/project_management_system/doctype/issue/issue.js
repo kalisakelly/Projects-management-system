@@ -2,6 +2,17 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Issue", {
+
+
+  onload: function (frm) {
+    frm.set_query("issue_category", function () {
+        return {
+            filters: {
+                project: frm.doc.project // Ensure the project's name matches
+            }
+        };
+    });
+},
   refresh(frm) {
     frm.add_custom_button("Respond Issue", function () {
       frm.trigger("respond_issue");

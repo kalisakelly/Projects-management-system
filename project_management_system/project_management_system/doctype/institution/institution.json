@@ -69,7 +69,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-11-13 11:34:42.766647",
+ "modified": "2024-11-18 17:24:33.720791",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Institution",
@@ -96,6 +96,17 @@
    "read": 1,
    "report": 1,
    "role": "Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Project Manager",
    "select": 1,
    "share": 1,
    "write": 1

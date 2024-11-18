@@ -1,48 +1,82 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-11-18 11:07:29.099598",
+ "autoname": "field:name1",
+ "creation": "2024-11-18 14:27:29.753368",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_break_trku",
+  "amended_from",
   "name1",
   "level",
-  "institutions"
+  "institution"
  ],
  "fields": [
   {
+   "fieldname": "section_break_trku",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Department",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "label": "Name",
+   "unique": 1
   },
   {
    "fieldname": "level",
-   "fieldtype": "Data",
-   "label": "Level"
+   "fieldtype": "Select",
+   "label": "Level",
+   "options": "1\n2\n3\n4\n5\n6"
   },
   {
-   "fieldname": "institutions",
+   "fieldname": "institution",
    "fieldtype": "Link",
-   "label": "Institutions",
+   "label": "Institution",
    "options": "Institution"
   }
  ],
  "index_web_pages_for_search": 1,
- "issingle": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-11-18 11:09:29.452763",
+ "modified": "2024-11-18 15:22:38.411389",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Department",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "email": 1,
+   "export": 1,
    "print": 1,
    "read": 1,
+   "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Project Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   }

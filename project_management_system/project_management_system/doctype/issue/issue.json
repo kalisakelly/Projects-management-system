@@ -26,6 +26,7 @@
   "amended_from",
   "date_of_intake",
   "date_of_issue",
+  "department",
   "column_break_avzo",
   "project",
   "issue_category",
@@ -71,8 +72,9 @@
   },
   {
    "fieldname": "project",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Project",
+   "options": "Project",
    "read_only": 1
   },
   {
@@ -259,12 +261,18 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-17 09:57:40.756477",
+ "modified": "2024-11-18 21:03:47.969199",
  "modified_by": "Administrator",
  "module": "Project Management System",
  "name": "Issue",
